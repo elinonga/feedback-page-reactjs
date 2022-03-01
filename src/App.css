@@ -1,38 +1,353 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  position: absolute;
+  width: 200px;
+  height: 52px;
+  left: 32px;
+  top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.Horizontal-Line {
+  position: absolute;
+  width: 1440px;
+  height: 0px;
+  left: 0px;
+  top: 60px;
+
+  border: 1px solid #DEDEDE;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.Title-Header {
+  position: absolute;
+  width: 351px;
+  height: 59px;
+  left: 494px;
+  top: 50px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 37px;
+  line-height: 59px;
+  /* identical to box height */
+  
+  text-align: center;
+  
+  color: #273040;
+}
+
+
+
+/* Rate your experience from 0 to 5 stars: */
+.Experience {
+  position: absolute;
+  left: 470px;
+  top: 160px;
+}
+
+.Experience-Stars-Group {
+  position: relative;
+  width: 444px;
+  height: 50px;
+  left: 100px;
+}
+
+.Experience-Header {
+  width: 400px;
+  height: 29px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+
+  color: #273040;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.Star-Experience {
+  cursor: pointer;
+  transition: color 200ms;
+  width: 40px;
+  height: 40px;
+} 
+
+.Line-Experience {
+  position: relative;
+  width: 600px;
+  right: 90px;
+  border: 1px solid #DEDEDE;
+} 
+
+
+
+/* How satisfied are you with the payment process? */
+.Payment {
+  position: absolute;
+  left: 419px;
+  top: 300px;
+}
+
+.Payment-Stars-Group {
+  position: relative;
+  width: 444px;
+  height: 50px;
+  left: 150px;
+}
+
+.Payment-Header {
+  width: 500px;
+  height: 29px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  
+  color: #273040;
+}
+
+.Star-Payment {
+  cursor: pointer;
+  transition: color 200ms;
+  width: 40px;
+  height: 40px;
+} 
+
+.Line-Payment {
+  position: relative;
+  width: 600px;
+  border: 1px solid #DEDEDE;
+  right: 40px;
+} 
+
+
+
+/* How satisfied are you with our customer service? */
+.CustomerService {
+  position: absolute;
+  left: 419px;
+  top: 440px;
+}
+
+.CustomerService-Stars-Group {
+  position: relative;
+  width: 444px;
+  height: 50px;
+  left: 150px;
+}
+
+.CustomerService-Header {
+  width: 500px;
+  height: 29px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  
+  color: #273040;
+}
+
+.Star-CustomerService {
+  cursor: pointer;
+  transition: color 200ms;
+  width: 40px;
+  height: 40px;
+} 
+
+.Line-CustomerService {
+  position: relative;
+  width: 600px;
+  border: 1px solid #DEDEDE;
+  right: 40px;
+}
+
+
+
+/* Please leave a comment about your experience below: */
+.TextArea {
+  position: absolute;
+  left: 380px;
+  top: 580px;
+  bottom: 50px;
+}
+
+.TextArea-Header {
+  width: 600px;
+  height: 29px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  
+  color: #273040;
+}
+
+.Feedback-Box {
+  position: relative;
+  width: 600px;
+  height: 191px;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  right: 10px;
+}
+
+.Feedback-Box::placeholder {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 10px;
+  color: #C8C8C8;
+}
+
+
+/* PopUp Modal */
+.PopUp {
+  position: absolute;
+  left: 380px;
+  top: 720px;
+  bottom: 50px;
+}
+
+.btn-modal {
+
+  /* Auto layout */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 14px 20px;
+  margin-top: 150px;
+
+  position: absolute;
+  width: 184px;
+  height: 48px;
+  left: 200px;
+
+  /* Text Green */
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Sola Green */
+  background: #11C4B0;
+  border-radius: 80px;
+  border-color: #11C4B0;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay {
+  background: rgba(49,49,49,0.8);
 }
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 14px 28px;
+  width: 400px;
+  height: 300px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 2px 17px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+}
+
+.close-modal {
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  margin-top: 100px;
+
+  position: absolute;
+  top: 150px;
+  left: 200px;
+
+  /* Text Green */
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Sola Green */
+  background: #11C4B0;
+  border-radius: 80px;
+  border-color: #11C4B0;
+
+}
+
+.Phone-Modal {
+  position: absolute;
+  width: 75px;
+  height: 120px;
+  left: 200px;
+  top: 30px;
+}
+
+.Text-Modal {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+/* identical to box height */
+
+text-align: center;
+
+color: #979797;
+
+}
+
